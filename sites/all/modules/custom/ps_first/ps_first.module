@@ -21,3 +21,27 @@ function ps_first_help($path, $arg) {
       break;
   }
 }
+
+function ps_first_menu() {
+  $items = array();
+
+  $items['ps_first/my-first-page'] = array(
+    'title' => 'Hello World from Peet',
+    'page callback' => 'say_hello_world',
+    'access callback' => TRUE,
+    'menu_name' => 'main-menu',
+    //'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+function say_hello_world() {
+  $vars = array();
+  $vars['type']="ul";
+  $vars['title'] = "";
+  $vars['attributes']=array("");
+  $vars['items'][0]="This is a simple content of Peet module";
+
+  return theme_item_list($vars);
+}
