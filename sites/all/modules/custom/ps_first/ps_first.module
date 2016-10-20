@@ -7,23 +7,25 @@
 
 /**
  * Implements hook_menu().
- * @return array
  */
-function Ps_First_menu() {
+function ps_first_menu() {
   $items = array();
 
   $items['my-first-page'] = array(
-    'title' => 'Hello World from Peet',
-    'page callback' => 'ps_first_say_hello_world',
+    'title'           => 'Hello World from Peet',
+    'page callback'   => 'Ps_First_Say_Hello_World',
     'access callback' => TRUE,
-    'menu_name' => 'main-menu',
+    'menu_name'       => 'main-menu',
   );
   return $items;
+
 }//end Ps_First_menu()
 
 /**
  * Page content.
- * * @return string
+ *
+ * @return string
+ *   Returns the string that is displayed on the page.
  */
 function ps_first_say_hello_world() {
   return "This is a simple content of Peet module";
