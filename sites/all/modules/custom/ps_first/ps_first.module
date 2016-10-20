@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * A block module that displays recent blog and forum posts.
+ *
+ * @return string
+ *
+ * Implements hook_help().
+ *
+ * Displays help and module information.
+ *
+ * @param path
+ *   Which path of the site we're using to display help
+ * @param arg
+ *   Array that holds the current path as returned from arg() function
+ */
+function ps_first_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#ps_first":
+      return '' . t("Here you find a little help on the conserning this module") . '';
+      break;
+  }
+}
