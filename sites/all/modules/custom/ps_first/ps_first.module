@@ -1,6 +1,15 @@
 <?php
 
-function ps_first_menu() {
+/**
+ * @file
+ * My First module, that displays greetings to the world.
+ */
+
+/**
+ * Implements hook_menu().
+ * @return array
+ */
+function Ps_First_menu() {
   $items = array();
 
   $items['my-first-page'] = array(
@@ -9,10 +18,13 @@ function ps_first_menu() {
     'access callback' => TRUE,
     'menu_name' => 'main-menu',
   );
-
   return $items;
-}
+}//end Ps_First_menu()
 
+/**
+ * Page content.
+ * * @return string
+ */
 function ps_first_say_hello_world() {
   return "This is a simple content of Peet module";
 }
