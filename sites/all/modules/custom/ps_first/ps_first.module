@@ -1,47 +1,18 @@
 <?php
-/**
- * @file
- * A block module that displays recent blog and forum posts.
- *
- * @return string
- *
- * Implements hook_help().
- *
- * Displays help and module information.
- *
- * @param path
- *   Which path of the site we're using to display help
- * @param arg
- *   Array that holds the current path as returned from arg() function
- */
-function ps_first_help($path, $arg) {
-  switch ($path) {
-    case "admin/help#ps_first":
-      return '' . t("Here you find a little help on the conserning this module") . '';
-      break;
-  }
-}
 
 function ps_first_menu() {
   $items = array();
 
-  $items['ps_first/my-first-page'] = array(
+  $items['my-first-page'] = array(
     'title' => 'Hello World from Peet',
-    'page callback' => 'say_hello_world',
+    'page callback' => 'ps_first_say_hello_world',
     'access callback' => TRUE,
     'menu_name' => 'main-menu',
-    //'type' => MENU_CALLBACK,
   );
 
   return $items;
 }
 
-function say_hello_world() {
-  $vars = array();
-  $vars['type']="ul";
-  $vars['title'] = "";
-  $vars['attributes']=array("");
-  $vars['items'][0]="This is a simple content of Peet module";
-
-  return theme_item_list($vars);
+function ps_first_say_hello_world() {
+  return "This is a simple content of Peet module";
 }

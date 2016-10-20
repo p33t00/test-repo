@@ -1,4 +1,4 @@
 name = Peet Module
 description = A block module that echoes Hello World.
 core = 7.x
-package = Peet Modules
+package = UNL
