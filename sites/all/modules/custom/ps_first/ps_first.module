@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * My First module, that displays greetings to the world.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function ps_first_menu() {
+  $items = array();
+
+  $items['my-first-page'] = array(
+    'title'           => 'Hello World from Peet',
+    'page callback'   => 'ps_first_say_hello_world',
+    'access callback' => TRUE,
+    'menu_name'       => 'main-menu',
+  );
+  return $items;
+
+}
+
+/**
+ * Returns the string that is displayed on the page.
+ */
+function ps_first_say_hello_world() {
+  return 'This is a simple content of Peet module';
+}
