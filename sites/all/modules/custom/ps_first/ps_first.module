@@ -32,8 +32,8 @@ function ps_first_say_hello_world() {
  */
 function ps_first_block_info() {
   $blocks = array();
-  $blocks['Peet Block'] = array(
-    'info' => t('Peet Block Title'),
+  $blocks['peet_plock'] = array(
+    'info' => t('Peet Block'),
   );
   return $blocks;
 }
@@ -42,5 +42,5 @@ function ps_first_block_info() {
  * Implements hook_block_view().
  */
 function ps_first_block_view() {
-  return array('content' => 'Hello World');
+  return array('content' => t('Hello World'));
 }
