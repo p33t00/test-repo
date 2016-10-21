@@ -27,7 +27,6 @@ function ps_first_say_hello_world() {
   return 'This is a simple content of Peet module';
 }
 
-
 /**
  * Implements hook_block_info().
  */
@@ -37,4 +36,11 @@ function ps_first_block_info() {
     'info' => t('Peet Block Title'),
   );
   return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ps_first_block_view() {
+  return array('content' => 'Hello World');
 }
