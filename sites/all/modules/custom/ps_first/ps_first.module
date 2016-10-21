@@ -13,13 +13,13 @@ function ps_first_menu() {
 
   $items['my-first-page'] = array(
     'title'           => 'Hello World from Peet',
-    'page callback'   => 'Ps_First_Say_Hello_World',
+    'page callback'   => 'ps_first_say_hello_world',
     'access callback' => TRUE,
     'menu_name'       => 'main-menu',
   );
   return $items;
 
-}//end Ps_First_menu()
+}//end ps_first_menu()
 
 /**
  * Page content.
