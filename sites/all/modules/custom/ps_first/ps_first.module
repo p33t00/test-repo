@@ -19,14 +19,11 @@ function ps_first_menu() {
   );
   return $items;
 
-}//end ps_first_menu()
+}
 
 /**
- * Page content.
- *
- * @return string
- *   Returns the string that is displayed on the page.
+ * Returns the string that is displayed on the page.
  */
 function ps_first_say_hello_world() {
-  return "This is a simple content of Peet module";
+  return 'This is a simple content of Peet module';
 }
