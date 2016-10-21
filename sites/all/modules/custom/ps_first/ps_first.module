@@ -18,7 +18,6 @@ function ps_first_menu() {
     'menu_name'       => 'main-menu',
   );
   return $items;
-
 }
 
 /**
@@ -26,4 +25,22 @@ function ps_first_menu() {
  */
 function ps_first_say_hello_world() {
   return 'This is a simple content of Peet module';
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function ps_first_block_info() {
+  $blocks = array();
+  $blocks['peet_plock'] = array(
+    'info' => t('Peet Block'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ps_first_block_view() {
+  return array('content' => t('Hello World'));
 }
