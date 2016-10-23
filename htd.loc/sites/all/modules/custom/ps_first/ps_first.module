@@ -18,15 +18,30 @@ function ps_first_menu() {
     'menu_name'       => 'main-menu',
   );
   return $items;
-
-}//end ps_first_menu()
+}
 
 /**
- * Page content.
- *
- * @return string
- *   Returns the string that is displayed on the page.
+ * Returns the string that is displayed on the page.
  */
 function ps_first_say_hello_world() {
-  return "This is a simple content of Peet module";
+  return 'This is a simple content of Peet module';
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function ps_first_block_info() {
+  $blocks = array();
+  $blocks['peet_block'] = array(
+    'info' => t('Peet Block'),
+    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ps_first_block_view() {
+  return array('content' => t('Hello World'));
 }
