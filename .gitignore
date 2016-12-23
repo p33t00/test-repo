@@ -11,3 +11,8 @@ sites/*/private
 conf/
 htd.loc/
 logs/
+
+composer.phar
+cache/*
+logs/*
+vendor/*
